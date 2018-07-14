@@ -105,7 +105,7 @@ function init() {
         return new GhostServer(parentApp);
     }).then(function (_ghostServer) {
         ghostServer = _ghostServer;
-        nconf.set('server:port', process.env.PORT);
+        
         // scheduling can trigger api requests, that's why we initialize the module after the ghost server creation
         // scheduling module can create x schedulers with different adapters
         debug('Server done');
